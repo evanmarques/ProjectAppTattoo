@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PCStudioApp</string>
+    <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
+    <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
+    <string name="nav_header_title">PC Studio App</string>
+    <string name="nav_header_subtitle">admin@pcstudio.com</string>
+    <string name="nav_header_desc">Cabeçalho de navegação</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_portfolio">Portfólio</string>
+    <string name="menu_appointments">Agendamentos</string>
+    <string name="menu_artists">Artistas</string>
+    <string name="menu_logout">Sair</string>
+</resources>

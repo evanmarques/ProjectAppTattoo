@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#000000"
+        android:pathData="M54,54m-49.5,0a49.5,49.5 0,1 1,99 0a49.5,49.5 0,1 1,-99 0" />
+</vector>
+
+    <!--Importante: Mantenha os atributos:
+     android:width
+     android:height
+     android:viewportWidth
+     android:viewportHeight
+
+     Altere apenas os atribudos dentro da tag `<path>` se quiser personalizar o ícone.
+     android:pathData
+     android:fillColor-->

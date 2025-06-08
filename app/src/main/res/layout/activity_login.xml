@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Layout Raiz: FrameLayout
+O FrameLayout é um tipo de layout que permite empilhar Views (elementos de interface)
+uma sobre a outra, como camadas. Isso é perfeito para criar efeitos onde um elemento
+(como uma imagem de fundo) fica por baixo de outros elementos (como texto e botões).
+
+Atributos do FrameLayout:
+- android:layout_width="match_parent": Define que a largura deste layout ocupará
+  toda a largura disponível da tela do dispositivo.
+- android:layout_height="match_parent": Define que a altura deste layout ocupará
+  toda a altura disponível da tela do dispositivo.
+- android:background="@drawable/background_dragao": ESTE É O PONTO CRÍTICO!
+  Define a imagem de fundo para este FrameLayout. O Android buscará um arquivo
+  com o nome 'background_dragao' (sem a extensão .jpg ou .png) na pasta 'res/drawable'.
+  Certifique-se de que o nome do seu arquivo de imagem na pasta 'drawable' é EXATAMENTE
+  'background_dragao.jpg' (ou .png). Se houver um erro de digitação aqui, a imagem não aparecerá.
+- tools:context=".authentication.LoginActivity": Uma ferramenta de design que ajuda
+  o Android Studio a renderizar a pré-visualização corretamente, associando este layout
+  à sua Activity de Login.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brackground_dragao"
+    tools:context=".authentication.LoginActivity">
+
+    <!--
+    Camada de Sobreposição Escura: View
+    Esta View é o primeiro elemento filho direto do FrameLayout.
+    Ela cria uma camada semi-transparente que cobre toda a tela,
+    sendo desenhada *acima* da imagem de fundo (background_dragao.jpg).
+    Seu principal propósito é escurecer a imagem de fundo, o que é crucial
+    para garantir que o texto e os elementos da UI (que virão depois)
+    tenham contraste suficiente e sejam facilmente legíveis,
+    independentemente das cores e detalhes da imagem original.
+
+    Atributos da View:
+    - android:layout_width="match_parent": Ocupa toda a largura do FrameLayout pai.
+    - android:layout_height="match_parent": Ocupa toda a altura do FrameLayout pai.
+    - android:background="#80000000": Define a cor de fundo desta View.
+      #80000000 é um código de cor hexadecimal no formato ARGB (Alpha, Red, Green, Blue).
+      - '80': Representa o canal Alpha (transparência). '80' em hexadecimal é equivalente a 128 em decimal.
+              Como o valor máximo é FF (255), 128/255 resulta em aproximadamente 50% de opacidade.
+      - '000000': Representa a cor preta pura (00 para Vermelho, 00 para Verde, 00 para Azul).
+      Resultado: Uma cor preta com 50% de transparência.
+      Para deixar o texto mais opaco (ou seja, o fundo MENOS opaco), você pode DIMINUIR o valor '80'.
+      Por exemplo: '#40000000' (25% opacidade) ou '#20000000' (12.5% opacidade) para um fundo mais visível.
+      Para deixar o texto MENOS opaco (ou seja, o fundo MAIS opaco), você pode AUMENTAR o valor '80'.
+      Por exemplo: '#A0000000' (62.5% opacidade) ou '#C0000000' (75% opacidade) para um fundo mais escuro.
+    -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <!--
+    Conteúdo Principal da UI: LinearLayout
+    Este LinearLayout é o segundo elemento filho direto do FrameLayout.
+    Ele é desenhado *acima* da View de sobreposição (e, consequentemente, da imagem de fundo).
+    Ele serve como um contêiner para todos os elementos interativos e de texto da tela de login.
+    É configurado para empilhar seus filhos de forma vertical (em uma coluna) e centralizá-los na tela.
+
+    Atributos do LinearLayout:
+    - android:layout_width="match_parent": Ocupa toda a largura disponível do FrameLayout pai.
+    - android:layout_height="match_parent": Ocupa toda a altura disponível do FrameLayout pai.
+    - android:orientation="vertical": Define a direção em que os elementos filhos serão dispostos: um abaixo do outro.
+    - android:gravity="center": Alinha o conteúdo (todos os filhos) deste LinearLayout ao centro,
+      tanto vertical quanto horizontalmente, dentro de si mesmo.
+    - android:padding="16dp": Adiciona um espaçamento interno (preenchimento) de 16 density-independent pixels (dp)
+      em todos os lados (superior, inferior, esquerdo, direito). Isso cria uma margem interna e evita que o conteúdo
+      fique colado nas bordas da tela.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--
+        ELEMENTO: TextView - Título "Bem-vindo ao AppStudio"
+        Exibe o título principal da tela de login, dando as boas-vindas ao usuário.
+
+        Atributos do TextView:
+        - android:layout_width="wrap_content": A largura se ajusta para envolver apenas o conteúdo do texto.
+        - android:layout_height="wrap_content": A altura se ajusta para envolver apenas o conteúdo do texto.
+        - android:layout_marginBottom="32dp": Adiciona uma margem de 32dp na parte inferior,
+          criando espaço entre este título e o próximo elemento (campo de email).
+        - android:text="Bem-vindo ao AppStudio": O texto literal a ser exibido na tela.
+        - android:textColor="#FFFFFF": Cor do texto definida como branca (FFFFFF).
+        - android:textSize="28sp": Tamanho da fonte definido como 28 scale-independent pixels (sp).
+          'sp' é recomendado para texto, pois se ajusta às configurações de tamanho de fonte do usuário no sistema.
+        - android:textStyle="bold": Estilo do texto definido como negrito.
+        -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Bem-vindo ao AppStudio"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!--
+        ELEMENTO: EditText - Campo para Email/Usuário
+        Permite ao usuário inserir seu endereço de e-mail ou nome de usuário.
+
+        Atributos do EditText:
+        - android:id="@+id/edit_text_email": Identificador único para este componente.
+          Permite que você o referencie e manipule no código Kotlin (ex: para pegar o texto digitado).
+        - android:layout_width="match_parent": A largura ocupa todo o espaço disponível do LinearLayout pai,
+          respeitando o padding do pai.
+        - android:layout_height="wrap_content": A altura se ajusta para envolver o conteúdo do texto e o padding interno.
+        - android:layout_marginBottom="16dp": Margem inferior de 16dp, separando este campo do campo de senha.
+        - android:background="@drawable/rounded_edittext_background": Aplica o drawable personalizado
+          (fundo com bordas arredondadas e cor semi-transparente) que você criou na pasta 'drawable'.
+        - android:hint="Digite seu e-mail ou usuário": Texto de dica (placeholder) que aparece no campo quando está vazio.
+        - android:inputType="textEmailAddress": Sugere ao sistema um teclado otimizado para entrada de e-mail
+          (inclui o caractere '@' e sugestões de e-mail).
+        - android:padding="12dp": Preenchimento interno de 12dp para o texto dentro do campo,
+          dando espaço entre o texto e as bordas do campo.
+        - android:textColor="#FFFFFF": Cor do texto que o usuário digita definida como branca.
+        - android:textColorHint="#CCCCCC": Cor do texto de dica (placeholder) definida como cinza claro.
+        -->
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:hint="Digite seu e-mail ou usuário"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC" />
+
+        <!--
+        ELEMENTO: EditText - Campo para Senha
+        Permite ao usuário inserir sua senha, com caracteres ocultos.
+
+        Atributos do EditText:
+        - android:id="@+id/edit_text_password": Identificador único para este componente.
+        - android:layout_width="match_parent": Largura total.
+        - android:layout_height="wrap_content": Altura ajustada.
+        - android:layout_marginBottom="8dp": Margem inferior de 8dp, separando este campo do link "Esqueceu a senha?".
+        - android:background="@drawable/rounded_edittext_background": Aplica o mesmo fundo arredondado.
+        - android:hint="Digite sua senha": Texto de dica.
+        - android:inputType="textPassword": Define o tipo de entrada para ocultar os caracteres digitados (senha).
+        - android:padding="12dp": Preenchimento interno.
+        - android:textColor="#FFFFFF": Cor do texto digitado.
+        - android:textColorHint="#CCCCCC": Cor da dica.
+        -->
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_edittext_background"
+            android:hint="Digite sua senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#CCCCCC" />
+
+        <!--
+        ELEMENTO: TextView - Link "Esqueceu a senha?"
+        Um texto clicável que geralmente leva o usuário a uma tela de recuperação de senha.
+
+        Atributos do TextView:
+        - android:id="@+id/text_view_forgot_password": Identificador único.
+        - android:layout_width="wrap_content": Largura ajustada ao conteúdo.
+        - android:layout_height="wrap_content": Altura ajustada ao conteúdo.
+        - android:layout_gravity="end": Alinha este TextView à direita dentro do LinearLayout pai,
+          respeitando o padding.
+        - android:layout_marginBottom="24dp": Margem inferior de 24dp, separando este link dos botões.
+        - android:padding="4dp": Pequeno preenchimento ao redor do texto para aumentar a área de toque.
+        - android:text="Esqueceu a senha?": O texto a ser exibido.
+        - android:textColor="#FFFFFF": Cor do texto branca.
+        - android:textSize="14sp": Tamanho da fonte.
+        -->
+        <TextView
+            android:id="@+id/text_view_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp"
+            android:padding="4dp"
+            android:text="Esqueceu a senha?"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!--
+        ELEMENTO: Button - Botão "Entrar"
+        O botão principal para iniciar o processo de login.
+
+        Atributos do Button:
+        - android:id="@+id/button_login": Identificador único.
+        - android:layout_width="match_parent": Largura total.
+        - android:layout_height="wrap_content": Altura ajustada.
+        - android:layout_marginTop="24dp": Margem superior de 24dp, separando este botão do link "Esqueceu a senha?".
+        - android:backgroundTint="#FF4081": Cor de fundo do botão (um tom de rosa/magenta).
+        - android:padding="12dp": Preenchimento interno.
+        - android:text="Entrar": Texto do botão.
+        - android:textColor="#FFFFFF": Cor do texto do botão branca.
+        -->
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FF4081"
+            android:padding="12dp"
+            android:text="Entrar"
+            android:textColor="#FFFFFF" />
+
+        <!--
+        ELEMENTO: Button - Botão "Criar Conta"
+        Botão secundário para navegar para a tela de registro de nova conta.
+
+        Atributos do Button:
+        - android:id="@+id/button_register": Identificador único.-->
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#606060"
+            android:padding="12dp"
+            android:text="Criar Conta"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</FrameLayout>
