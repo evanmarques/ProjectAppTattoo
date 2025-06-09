@@ -1,14 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PCStudioApp</string>
-    <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
-    <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
-    <string name="nav_header_title">PC Studio App</string>
-    <string name="nav_header_subtitle">admin@pcstudio.com</string>
-    <string name="nav_header_desc">Cabeçalho de navegação</string>
+    <string name="app_name">PC Studio App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="welcome_background_image_desc">Imagem de fundo com trabalhos de tatuagem para a tela de boas-vindas</string>
+    <string name="welcome_tagline">Encontre e agende seu próximo artista de tatuagem</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_register">Cadastrar</string>
+    <string name="studio_contact_prompt">É um Studio? Cadastre seu Negócio</string>
+
+    <string name="title_activity_login">Entrar no App</string>
+    <string name="title_activity_register">Criar Nova Conta</string>
+    <string name="title_activity_home">Início</string>
+
     <string name="menu_portfolio">Portfólio</string>
-    <string name="menu_appointments">Agendamentos</string>
-    <string name="menu_artists">Artistas</string>
-    <string name="menu_logout">Sair</string>
-</resources>
+    <string name="menu_profile">Meu Perfil</string> <string name="menu_logout">Sair</string>
+    <string name="menu_appointments">Meus Agendamentos</string> <string name="menu_artists">Artistas</string> </resources>
