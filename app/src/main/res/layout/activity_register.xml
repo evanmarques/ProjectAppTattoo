@@ -19,7 +19,7 @@
         android:layout_gravity="top|start"
         android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Voltar"
+        android:contentDescription="Voltar para a tela anterior"
         app:srcCompat="@drawable/ic_arrow_back"
         app:tint="@color/white" />
 
@@ -50,7 +50,6 @@
             android:padding="12dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
-
         <EditText
             android:id="@+id/edit_text_register_email"
             android:layout_width="match_parent"
@@ -62,7 +61,6 @@
             android:padding="12dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
-
         <EditText
             android:id="@+id/edit_text_register_password"
             android:layout_width="match_parent"
@@ -74,7 +72,6 @@
             android:padding="12dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
-
         <EditText
             android:id="@+id/edit_text_confirm_password"
             android:layout_width="match_parent"
@@ -105,6 +102,5 @@
             android:text="Já tem uma conta? Faça login"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
-
     </LinearLayout>
 </FrameLayout>

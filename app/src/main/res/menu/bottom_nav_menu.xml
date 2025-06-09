@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/nav_bottom_home"
+    <item android:id="@+id/nav_bottom_home"
         android:icon="@drawable/ic_menu_home"
         android:title="Início" />
 
-    <item
-        android:id="@+id/nav_bottom_artists"
+    <item android:id="@+id/nav_bottom_artists"
         android:icon="@drawable/ic_bottom_artists"
         android:title="Artistas" />
 
-    <item
-        android:id="@+id/nav_bottom_appointments"
+    <item android:id="@+id/nav_bottom_appointments"
         android:icon="@drawable/ic_menu_slideshow"
         android:title="Agenda" />
 
-    <item
-        android:id="@+id/nav_bottom_profile"
+    <item android:id="@+id/nav_bottom_profile"
         android:icon="@drawable/ic_menu_person"
         android:title="Perfil" />
-
 </menu>
