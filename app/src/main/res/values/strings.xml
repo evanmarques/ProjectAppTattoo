@@ -23,5 +23,14 @@
     <string name="title_activity_home">Início</string>
 
     <string name="menu_portfolio">Portfólio</string>
-    <string name="menu_profile">Meu Perfil</string> <string name="menu_logout">Sair</string>
-    <string name="menu_appointments">Meus Agendamentos</string> <string name="menu_artists">Artistas</string> </resources>
+    <string name="menu_profile">Meu Perfil</string>
+    <string name="menu_logout">Sair</string>
+    <string name="menu_appointments">Meus Agendamentos</string>
+    <string name="menu_artists">Artistas</string>
+
+    <string name="login_title">Bem-vindo ao AppStudio</string>
+    <string name="login_email_hint">Digite seu e-mail ou usuário</string>
+    <string name="login_password_hint">Digite sua senha</string>
+    <string name="login_forgot_password">Esqueceu a senha?</string>
+    <string name="login_button_text">Entrar</string>
+    </resources>
