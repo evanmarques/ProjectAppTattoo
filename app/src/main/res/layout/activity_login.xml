@@ -95,13 +95,18 @@ Atributos do FrameLayout:
         - android:textStyle="bold": Estilo do texto definido como negrito.
         -->
         <TextView
+            android:id="@+id/tv_register_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:text="Bem-vindo ao AppStudio"
-            android:textColor="#FFFFFF"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:text="@string/prompt_register_link"
+            android:textColor="@color/purple_500"
+            android:textStyle="bold"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loading"
+            android:layout_marginBottom="16dp" />
 
         <!--
         ELEMENTO: EditText - Campo para Email/Usuário
@@ -164,6 +169,19 @@ Atributos do FrameLayout:
             android:textColor="#FFFFFF"
             android:textColorHint="#CCCCCC" />
 
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
         <!--
         ELEMENTO: TextView - Link "Esqueceu a senha?"
         Um texto clicável que geralmente leva o usuário a uma tela de recuperação de senha.
@@ -215,20 +233,5 @@ Atributos do FrameLayout:
             android:text="Entrar"
             android:textColor="#FFFFFF" />
 
-        <!--
-        ELEMENTO: Button - Botão "Criar Conta"
-        Botão secundário para navegar para a tela de registro de nova conta.
-
-        Atributos do Button:
-        - android:id="@+id/button_register": Identificador único.-->
-        <Button
-            android:id="@+id/button_register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#606060"
-            android:padding="12dp"
-            android:text="Criar Conta"
-            android:textColor="#FFFFFF"/>
     </LinearLayout>
 </FrameLayout>
