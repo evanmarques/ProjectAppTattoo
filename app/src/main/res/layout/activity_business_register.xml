@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brackground_dragao"
+    tools:context=".authentication.BusinessRegisterActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <ImageButton
+        android:id="@+id/button_back_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Voltar"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Cadastre seu Estúdio"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_text_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="Nome do Estúdio"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCCCCC" />
+
+            <EditText
+                android:id="@+id/edit_text_owner_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="Seu Nome Completo"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCCCCC" />
+
+            <EditText
+                android:id="@+id/edit_text_business_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_edittext_background"
+                android:hint="Seu E-mail de Contato"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCCCCC" />
+
+            <Button
+                android:id="@+id/button_send_business_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FF4081"
+                android:padding="12dp"
+                android:text="Enviar Solicitação"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
