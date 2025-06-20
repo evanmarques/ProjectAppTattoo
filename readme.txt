@@ -46,7 +46,22 @@ Visualização em Tela Cheia: Foi adicionada a funcionalidade que permite ao usu
 Fase 5: Implementação de Anúncios
 Configuração do AdMob: O SDK do Google Mobile Ads foi adicionado e configurado no projeto.
 Exibição de Banner: Um banner de anúncio de teste foi implementado com sucesso na tela de listagem de artistas, validando a configuração para futura monetização.
+
 Fase 6: Conexão com o Backend (Estado Atual)
 Configuração do Firebase: O projeto foi conectado a um projeto Firebase, com os serviços Firestore Database e Cloud Storage configurados e suas regras de segurança ajustadas para o modo de desenvolvimento.
 Cadastro Real de Estúdios: A tela "Cadastre seu Negócio" foi refatorada para salvar os dados preenchidos no formulário (incluindo links de imagens) diretamente em uma coleção studios no Cloud Firestore.
 Listas Dinâmicas do Firestore: As telas de "Início" (para Estilos) e "Artistas" foram modificadas para, em vez de usar dados de exemplo, buscar e exibir os dados em tempo real do banco de dados Firestore.
+
+
+Quero que faça a leitura deste repositório que é meu projeto. Estava fazendo no próprio gemini em outro chat porém começou a trazer muitas orientações repetidas.
+
+A finalidade deste aplicativo é para Studio de tatuadores registrarem seu Studio para que usuários finais possam acessar o app gratuitamente para poder localizar Studio próximo a sua localização para que possa buscar pela melhor opção, realizar agendamentos e afins.
+
+Para esse app, quero gerar renda de algumas formas:
+- Anúncios: Para usuário finais onde terão acesso free aos studios, porém com anúncios.
+
+- Assinaturas pela parte dos Tatuadores, diferenciando por alguns pacotes:
+1. Free: onde terá apenas o registro do Studio, sem a opção de cadastrar equipe, sem opção de cadastrar fotos, bem básico, apenas informatívo como um cartão de visita.
+2.Básico: Terá opção de cadastrar Imagem de perfil com upload de sua biblioteca, terá a opção de cadastrar a URL do seu Instagram, WhatsApp e Facebook.
+3. Avançado: Terá as opção acima com adicional de fazer upload de até 10 imagens de seu trabalho podendo expandir, poderá cadastrar sua agenda e gerenciar agendamentos.
+4. Premium: Com as opções acima, porém com adicional para fazer gestão de estoque, gestão de agendamentos, gestão de vendas de horas tatuadas.
