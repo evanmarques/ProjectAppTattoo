@@ -52,9 +52,6 @@ Configuração do Firebase: O projeto foi conectado a um projeto Firebase, com o
 Cadastro Real de Estúdios: A tela "Cadastre seu Negócio" foi refatorada para salvar os dados preenchidos no formulário (incluindo links de imagens) diretamente em uma coleção studios no Cloud Firestore.
 Listas Dinâmicas do Firestore: As telas de "Início" (para Estilos) e "Artistas" foram modificadas para, em vez de usar dados de exemplo, buscar e exibir os dados em tempo real do banco de dados Firestore.
 
-
-Quero que faça a leitura deste repositório que é meu projeto. Estava fazendo no próprio gemini em outro chat porém começou a trazer muitas orientações repetidas.
-
 A finalidade deste aplicativo é para Studio de tatuadores registrarem seu Studio para que usuários finais possam acessar o app gratuitamente para poder localizar Studio próximo a sua localização para que possa buscar pela melhor opção, realizar agendamentos e afins.
 
 Para esse app, quero gerar renda de algumas formas:
